@@ -1,0 +1,9 @@
+  <h1>Heros List</h1>
+<ul>
+    <li *ngFor="let item of heroList">
+      <a href="javascript:void(0)" (click)="onSelect(item)">
+        {{item.name}}
+      </a>
+    </li>
+  </ul>
+

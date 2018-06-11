@@ -1,0 +1,18 @@
+<h4>Getting user input from $event</h4>
+<p>
+<input (keyup)="onKey($event)" />
+{{values}}
+</p>
+<h4>Get user input from a template reference variable</h4>
+<input #box (keyup)="onKeyup(box.value)" />
+{{values2}}
+
+<h4>Key event filtering (with key.enter)</h4>
+<input #box1 (keyup.enter)="onEnter(box1.value)" (blur)="onEnter(box1.value)"/>
+{{values3}}
+
+<h4>Putting all Together</h4>
+<input #newHero (keyup.enter)="add(newHero,newHero.value)" (blur)="add(newHero,newHero.value);"/>
+<ul>
+  <li *ngFor="let hero of heros">{{hero}}</li>
+</ul>

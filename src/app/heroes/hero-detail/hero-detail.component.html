@@ -1,0 +1,8 @@
+<h2>Hero Details</h2>
+<div *ngIf="hero | async as hero">  
+    <p>Id:{{hero.id}}</p> 
+    <p>Name:{{hero.name}}</p>
+</div>
+<div>
+  <button class="btn" (click)="goBack()">goBack</button>
+</div>
