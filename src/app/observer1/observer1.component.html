@@ -1,3 +1,39 @@
-<p>
-  observer1 works!
-</p>
+
+<header class="header">
+  <form>
+    <input type="text" [formControl]="searchField" />
+  </form> 
+</header>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Gender</th>
+    <th>Ip Address</th>
+  </tr>
+  <tr *ngFor="let user of users|async">
+    <td>{{user.id}}</td>
+    <td>{{user.first_name}},{{user.last_name}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.gender}}</td>
+    <td>{{user.ip_address}}</td>
+  </tr>
+</table>
+<table border="1">
+  <tr>
+    <th>Track Name</th>
+    <th>Artist Name</th>
+    <th>track ViewUrl</th>
+    <th>artworkUrl30</th>
+    <th>artistId</th>
+    
+  </tr>
+  <tr *ngFor="let track of tracks|async">
+    <td>{{track.trackName}}</td>
+    <td>{{track.artistName}}</td>
+    <td>{{track.trackViewUrl}}</td>
+    <td>{{track.artworkUrl30}}</td>
+    <td>{{track.artistId}}</td>
+  </tr>
+</table>
